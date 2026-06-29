@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kia Rio X-Line 2023 — 41 500 км, купить в Москве | Гарант</title>
+    <meta name="description" content="Kia Rio X-Line 2023, 1.6 АТ, 41 500 км. Проверенный автомобиль с ПТС, полной историей и диагностикой. Подробности, фото и запись на тест-драйв.">
+    <link rel="stylesheet" href="catalog-style.css">
+    <script defer src="car-actions.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-inner">
+            <div class="logo">
+                <h1>ГАРАНТ</h1>
+                <span>автодилер</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="Catalog.html">Каталог</a>
+                <a href="Contact.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <section class="car-detail">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img src="images/kia-rio.jpg" alt="Kia Rio X-Line">
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <p class="eyebrow">В наличии • С ПТС</p>
+                    <h2>Kia Rio X-Line</h2>
+                    <div class="car-subtitle">2023 г. • 1.6 АТ • 41 500 км • серый</div>
+                    <div class="price-block">
+                        <div class="price-big">2 050 000 ₽</div>
+                        <div class="price-credit">Автомобиль проверен и готов к осмотру и тест-драйву.</div>
+                    </div>
+                    <div class="spec-grid">
+                        <div class="spec-item"><strong>Двигатель</strong><span>1.6 л / 123 л.с. / бензин</span></div>
+                        <div class="spec-item"><strong>Коробка</strong><span>Автомат</span></div>
+                        <div class="spec-item"><strong>Привод</strong><span>Передний</span></div>
+                        <div class="spec-item"><strong>Пробег</strong><span>41 500 км</span></div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn action-btn" data-open-credit>Кредит</button>
+                        <button class="btn btn-secondary action-btn" data-open-chat>Связаться с автодиллером</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-section">
+                <div class="detail-card">
+                    <h3>Ключевые характеристики</h3>
+                    <p>Надёжный городской автомобиль с хорошей комплектацией, комфортной подвеской и современным салоном. Подходит тем, кто ценит спокойную езду и экономичность.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Преимущества</h3>
+                    <ul>
+                        <li>Техническая диагностика проведена перед продажей</li>
+                        <li>Оригинальный ПТС и прозрачная история</li>
+                        <li>Подходит для ежедневных поездок и поездок по трассе</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay hidden" id="creditModal">
+        <div class="modal-card">
+            <h3>Кредит на автомобиль</h3>
+            <p>Подберите удобные условия финансирования.</p>
+            <form class="modal-form" id="creditForm">
+                <label>Сумма кредита
+                    <input type="number" name="creditAmount" id="creditAmount" min="100000" step="10000" value="2050000" required>
+                </label>
+                <label>Первоначальный взнос
+                    <select name="initialPayment" id="initialPayment">
+                        <option value="0">0 ₽</option>
+                        <option value="205000">205 000 ₽</option>
+                        <option value="410000">410 000 ₽</option>
+                        <option value="615000">615 000 ₽</option>
+                    </select>
+                </label>
+                <label>Срок кредита
+                    <select name="creditTerm" id="creditTerm">
+                        <option value="1">1 год</option>
+                        <option value="2">2 года</option>
+                        <option value="3" selected>3 года</option>
+                        <option value="4">4 года</option>
+                        <option value="5">5 лет</option>
+                    </select>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Рассчитать</button>
+                </div>
+                <div id="creditResult" class="credit-result"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="chatModal">
+        <div class="modal-card">
+            <h3>Связаться с автодиллером</h3>
+            <p>Напишите вопрос или пожелание — и мы ответим как можно скорее.</p>
+            <div class="chat-log" id="chatLog"></div>
+            <form class="modal-form" id="chatForm">
+                <textarea id="chatInput" rows="4" placeholder="Например: хочу забронировать автомобиль и узнать детали..."></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p>© 2026 Автодилер «Гарант». Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

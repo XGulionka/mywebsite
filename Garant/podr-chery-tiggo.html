@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chery Tiggo 7 Pro 2024 — купить в Москве, серебристый | Гарант</title>
+    <meta name="description" content="Chery Tiggo 7 Pro 2024, 1.5 CVT, 12 400 км, серебро. Полная история и техническая проверка. Подробные фото, характеристики и условия покупки.">
+    <link rel="stylesheet" href="catalog-style.css">
+    <script defer src="car-actions.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-inner">
+            <div class="logo">
+                <h1>ГАРАНТ</h1>
+                <span>автодилер</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="Catalog.html">Каталог</a>
+                <a href="Contact.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <section class="car-detail">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img src="images/chery-tiggo.jpg" alt="Chery Tiggo 7 Pro">
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <p class="eyebrow">В наличии • С ПТС</p>
+                    <h2>Chery Tiggo 7 Pro</h2>
+                    <div class="car-subtitle">2024 г. • 1.5 CVT • 12 400 км • серебро</div>
+                    <div class="price-block">
+                        <div class="price-big">2 780 000 ₽</div>
+                        <div class="price-credit">Подходит для тех, кто ищет современный кроссовер с хорошей комплектацией.</div>
+                    </div>
+                    <div class="spec-grid">
+                        <div class="spec-item"><strong>Двигатель</strong><span>1.5 л / 147 л.с. / бензин</span></div>
+                        <div class="spec-item"><strong>Коробка</strong><span>CVT</span></div>
+                        <div class="spec-item"><strong>Привод</strong><span>Передний</span></div>
+                        <div class="spec-item"><strong>Пробег</strong><span>12 400 км</span></div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn action-btn" data-open-credit>Кредит</button>
+                        <button class="btn btn-secondary action-btn" data-open-chat>Связаться с автодиллером</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-section">
+                <div class="detail-card">
+                    <h3>Ключевые характеристики</h3>
+                    <p>Современный кроссовер с просторным салоном, проработанной мультимедийной системой и удобной посадкой для всей семьи.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Преимущества</h3>
+                    <ul>
+                        <li>Эффективный двигатель и комфорт в движении</li>
+                        <li>Просторный багажник и удобный салон</li>
+                        <li>Полная проверка перед продажей</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay hidden" id="creditModal">
+        <div class="modal-card">
+            <h3>Кредит на автомобиль</h3>
+            <p>Подберите удобные условия финансирования.</p>
+            <form class="modal-form" id="creditForm">
+                <label>Сумма кредита
+                    <input type="number" name="creditAmount" id="creditAmount" min="100000" step="10000" value="2780000" required>
+                </label>
+                <label>Первоначальный взнос
+                    <select name="initialPayment" id="initialPayment">
+                        <option value="0">0 ₽</option>
+                        <option value="278000">278 000 ₽</option>
+                        <option value="556000">556 000 ₽</option>
+                        <option value="834000">834 000 ₽</option>
+                    </select>
+                </label>
+                <label>Срок кредита
+                    <select name="creditTerm" id="creditTerm">
+                        <option value="1">1 год</option>
+                        <option value="2">2 года</option>
+                        <option value="3" selected>3 года</option>
+                        <option value="4">4 года</option>
+                        <option value="5">5 лет</option>
+                    </select>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Рассчитать</button>
+                </div>
+                <div id="creditResult" class="credit-result"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="chatModal">
+        <div class="modal-card">
+            <h3>Связаться с автодиллером</h3>
+            <p>Напишите вопрос или пожелание — и мы ответим как можно скорее.</p>
+            <div class="chat-log" id="chatLog"></div>
+            <form class="modal-form" id="chatForm">
+                <textarea id="chatInput" rows="4" placeholder="Например: хочу забронировать автомобиль и узнать детали..."></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p>© 2026 Автодилер «Гарант». Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

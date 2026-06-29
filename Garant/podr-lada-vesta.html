@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lada Vesta Cross 2024 — пробег 23 000 км, купить в Москве | Гарант</title>
+    <meta name="description" content="Lada Vesta Cross 2024, 1.6 МТ, 23 000 км, белый. Полная история, ПТС, 120-точечная диагностика, гарантия и помощь в оформлении сделки. Запись на тест-драйв.">
+    <link rel="stylesheet" href="catalog-style.css">
+    <script defer src="car-actions.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-inner">
+            <div class="logo">
+                <h1>ГАРАНТ</h1>
+                <span>автодилер</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="Catalog.html">Каталог</a>
+                <a href="Contact.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <section class="car-detail">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img src="images/lada-vesta.jpg" alt="Lada Vesta Cross">
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <p class="eyebrow">В наличии • С ПТС</p>
+                    <h2>Lada Vesta Cross</h2>
+                    <div class="car-subtitle">2024 г. • 1.6 МТ • 23 000 км • белый</div>
+                    <div class="price-block">
+                        <div class="price-big">1 730 000 ₽</div>
+                        <div class="price-credit">Цена актуальна для данного автомобиля и может быть уточнена при осмотре.</div>
+                    </div>
+                    <div class="spec-grid">
+                        <div class="spec-item"><strong>Двигатель</strong><span>1.6 л / 106 л.с. / бензин</span></div>
+                        <div class="spec-item"><strong>Коробка</strong><span>Механика</span></div>
+                        <div class="spec-item"><strong>Привод</strong><span>Передний</span></div>
+                        <div class="spec-item"><strong>Пробег</strong><span>23 000 км</span></div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn action-btn" data-open-credit>Кредит</button>
+                        <button class="btn btn-secondary action-btn" data-open-chat>Связаться с автодиллером</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-section">
+                <div class="detail-card">
+                    <h3>Ключевые характеристики</h3>
+                    <p>Компактный и практичный кросс-кроссовер с хорошей посадкой, удобным салоном и достойной управляемостью. Автомобиль отлично подойдёт для города и ежедневных поездок.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Преимущества</h3>
+                    <ul>
+                        <li>Проверен по 120 точкам перед продажей</li>
+                        <li>Полная история обслуживания и ПТС</li>
+                        <li>Удобный для городской эксплуатации и поездок за город</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay hidden" id="creditModal">
+        <div class="modal-card">
+            <h3>Кредит на автомобиль</h3>
+            <p>Подберите удобные условия финансирования.</p>
+            <form class="modal-form" id="creditForm">
+                <label>Сумма кредита
+                    <input type="number" name="creditAmount" id="creditAmount" min="100000" step="10000" value="1730000" required>
+                </label>
+                <label>Первоначальный взнос
+                    <select name="initialPayment" id="initialPayment">
+                        <option value="0">0 ₽</option>
+                        <option value="173000">173 000 ₽</option>
+                        <option value="346000">346 000 ₽</option>
+                        <option value="519000">519 000 ₽</option>
+                    </select>
+                </label>
+                <label>Срок кредита
+                    <select name="creditTerm" id="creditTerm">
+                        <option value="1">1 год</option>
+                        <option value="2">2 года</option>
+                        <option value="3" selected>3 года</option>
+                        <option value="4">4 года</option>
+                        <option value="5">5 лет</option>
+                    </select>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Рассчитать</button>
+                </div>
+                <div id="creditResult" class="credit-result"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="chatModal">
+        <div class="modal-card">
+            <h3>Связаться с автодиллером</h3>
+            <p>Напишите вопрос или пожелание — и мы ответим как можно скорее.</p>
+            <div class="chat-log" id="chatLog"></div>
+            <form class="modal-form" id="chatForm">
+                <textarea id="chatInput" rows="4" placeholder="Например: хочу забронировать автомобиль и узнать детали..."></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Закрыть</button>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p>© 2026 Автодилер «Гарант». Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

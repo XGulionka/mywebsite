@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты автодилера Гарант — адрес, телефон, запись на тест-драйв</title>
+    <meta name="description" content="Контакты автодилера Гарант в Москве: адрес, телефон, часы работы и запись на тест-драйв. Подберём и оформим автомобиль быстро.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-title {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            margin-bottom: 10px;
+        }
+        .page-subtitle {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+        }
+        .contact-card, .map-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+        .contact-item {
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #eef2f7;
+        }
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .contact-item h3 {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .map-card {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #eff6ff, #f8fafc);
+        }
+        .map-card strong {
+            font-size: 1.1rem;
+        }
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.68);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .modal-backdrop.open {
+            display: flex;
+        }
+        .modal {
+            width: min(560px, 100%);
+            background: white;
+            border-radius: 22px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+        .modal h3 {
+            margin-bottom: 6px;
+        }
+        .modal form {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        label {
+            display: grid;
+            gap: 6px;
+            font-weight: 600;
+        }
+        input, select {
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font: inherit;
+        }
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .success {
+            margin-top: 12px;
+            display: none;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: #ecfdf3;
+            color: #166534;
+        }
+        .success.show {
+            display: block;
+        }
+        .reviews-section {
+            margin-top: 32px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+        .review-card {
+            border: 1px solid #eef2f7;
+            border-radius: 18px;
+            padding: 18px;
+            background: linear-gradient(135deg, #ffffff, #f8fbff);
+        }
+        .review-card .stars {
+            color: #f59e0b;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .review-card p {
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .review-author {
+            font-weight: 700;
+            color: var(--text);
+        }
+        .review-photo {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        .review-form {
+            margin-top: 20px;
+            display: grid;
+            gap: 12px;
+        }
+        .review-form textarea,
+        .review-form input[type="file"],
+        .review-form select {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font: inherit;
+        }
+        .review-form textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+        @media (max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper header-inner">
+            <div class="logo">
+                <h1>ГАРАНТ</h1>
+                <span>автодилер</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="Catalog.html">Каталог</a>
+                <a href="Contact.html" class="active-page">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main>
+            <h2 class="page-title">Свяжитесь с нами</h2>
+            <p class="page-subtitle">Оставьте заявку на тест-драйв, и мы подберём удобное время для встречи.</p>
+            <div class="contact-layout">
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <h3>📍 Адрес автосалона</h3>
+                        <p>г. Москва, Варшавское шоссе, 170<br> (ориентир — ТЦ «Автомолл»)</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📞 Телефоны</h3>
+                        <p>+7 (495) 123-45-67 — отдел продаж<br>+7 (495) 765-43-21 — сервис / trade-in</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Электронная почта</h3>
+                        <p>sales@garant-auto.ru<br>info@garant-auto.ru</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕒 Режим работы</h3>
+                        <p>Пн–Пт: 9:00 – 21:00<br>Сб–Вс: 10:00 – 19:00</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>👤 Владелец</h3>
+                        <p>XGulionka</p>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-open-modal>📋 Записаться на тест-драйв</button>
+                </div>
+
+                <div class="map-card">
+                    <strong>🗺️ Как добраться</strong>
+                    <p>Салон расположен рядом с ТЦ «Автомолл» и легко доступен на машине и общественном транспорте.</p>
+                    <p>Мы рекомендуем заранее записаться, чтобы подобрать удобное время и автомобиль под ваш запрос.</p>
+                </div>
+            </div>
+
+            <section class="reviews-section">
+                <h3>Отзывы клиентов</h3>
+                <p class="page-subtitle">Нам важно, чтобы каждая сделка оставляла приятное впечатление.</p>
+                <div class="reviews-grid" id="reviewsGrid">
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>«Быстро нашли автомобиль под мой бюджет, всё оформили прозрачно и без стресса. Спасибо за честный подход!»</p>
+                        <div class="review-author">Алексей, Москва</div>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>«Понравилось, что менеджер подробно объяснил все плюсы и минусы автомобиля. Очень вежливые и профессиональные люди.»</p>
+                        <div class="review-author">Марина, Подольск</div>
+                    </article>
+                    <article class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p>«Оформили trade-in без лишней волокиты, а машину получили в отличном состоянии. Рекомендую!»</p>
+                        <div class="review-author">Игорь, Химки</div>
+                    </article>
+                </div>
+
+                <form class="review-form" id="reviewForm">
+                    <label for="reviewName">Ваше имя</label>
+                    <input id="reviewName" type="text" placeholder="Введите имя" required>
+                    <label for="reviewRating">Оценка</label>
+                    <select id="reviewRating" required>
+                        <option value="1">1 звезда</option>
+                        <option value="2">2 звезды</option>
+                        <option value="3">3 звезды</option>
+                        <option value="4">4 звезды</option>
+                        <option value="5" selected>5 звезд</option>
+                    </select>
+                    <label for="reviewText">Текст отзыва</label>
+                    <textarea id="reviewText" placeholder="Напишите, что вам понравилось" required></textarea>
+                    <label for="reviewPhoto">Добавить фотографию</label>
+                    <input id="reviewPhoto" type="file" accept="image/*">
+                    <button type="submit" class="btn">Отправить отзыв</button>
+                    <div class="success" id="reviewSuccess">Спасибо! Ваш отзыв отправлен и скоро появится на странице.</div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-backdrop" id="testDriveModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h3 id="modalTitle">Запись на тест-драйв</h3>
+            <p>Оставьте свои данные, и мы свяжемся с вами для подтверждения времени.</p>
+            <form id="testDriveForm">
+                <label>Имя<input type="text" name="firstName" required></label>
+                <label>Фамилия<input type="text" name="lastName" required></label>
+                <label>Отчество<input type="text" name="patronymic"></label>
+                <label>Номер телефона<input type="tel" name="phone" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Удобное время
+                    <select name="time" required>
+                        <option value="">Выберите время</option>
+                        <option>09:00–10:00</option>
+                        <option>10:00–12:00</option>
+                        <option>12:00–14:00</option>
+                        <option>14:00–16:00</option>
+                        <option>16:00–18:00</option>
+                        <option>18:00–20:00</option>
+                    </select>
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" data-close-modal>Отмена</button>
+                    <button type="submit" class="btn">Отправить</button>
+                </div>
+            </form>
+            <div class="success" id="formSuccess">Спасибо! Ваша заявка принята, мы скоро свяжемся с вами.</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrapper footer-row">
+            <p>© 2026 Автодилер «Гарант». Все права защищены. | г. Москва, Варшавское ш., 170</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="privacy.html#cookies">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('testDriveModal');
+        const openBtn = document.querySelector('[data-open-modal]');
+        const closeBtn = document.querySelector('[data-close-modal]');
+        const form = document.getElementById('testDriveForm');
+        const success = document.getElementById('formSuccess');
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewSuccess = document.getElementById('reviewSuccess');
+        const reviewsGrid = document.getElementById('reviewsGrid');
+
+        function openModal() {
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            success.classList.remove('show');
+            form.reset();
+        }
+
+        openBtn?.addEventListener('click', openModal);
+        closeBtn?.addEventListener('click', closeModal);
+        modal?.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+
+        form?.addEventListener('submit', (event) => {
+            event.preventDefault();
+            success.classList.add('show');
+        });
+
+        reviewForm?.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('reviewName').value.trim();
+            const text = document.getElementById('reviewText').value.trim();
+            const photoInput = document.getElementById('reviewPhoto');
+
+            if (!name || !text) return;
+
+            const rating = document.getElementById('reviewRating').value;
+            const reviewCard = document.createElement('article');
+            reviewCard.className = 'review-card';
+            reviewCard.innerHTML = `
+                <div class="stars">${'★'.repeat(rating)}</div>
+                <p>«${text}»</p>
+                <div class="review-author">${name}</div>
+            `;
+
+            if (photoInput && photoInput.files && photoInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const img = document.createElement('img');
+                    img.className = 'review-photo';
+                    img.src = event.target.result;
+                    img.alt = `Отзыв клиента ${name}`;
+                    reviewCard.appendChild(img);
+                    reviewsGrid.prepend(reviewCard);
+                };
+                reader.readAsDataURL(photoInput.files[0]);
+            } else {
+                reviewsGrid.prepend(reviewCard);
+            }
+
+            reviewSuccess.classList.add('show');
+            reviewForm.reset();
+        });
+    </script>
+</body>
+</html>
